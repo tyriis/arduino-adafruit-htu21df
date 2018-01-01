@@ -60,7 +60,7 @@ float Adafruit_HTU21DF::readTemperature(void) {
     t <<= 8;
     t |= Wire.read();
 
-    uint8_t crc = Wire.read();
+    // uint8_t crc = Wire.read();
 
     float temp = t;
     temp *= 175.72;
@@ -86,7 +86,7 @@ float Adafruit_HTU21DF::readHumidity(void) {
     h <<= 8;
     h |= Wire.read();
 
-    uint8_t crc = Wire.read();
+    // uint8_t crc = Wire.read();
 
     float hum = h;
     hum *= 125;
